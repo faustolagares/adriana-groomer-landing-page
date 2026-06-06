@@ -442,17 +442,18 @@ section { padding: clamp(3.75rem, 9vw, 8rem) var(--pad); position: relative; }
 /* Paw-aligned "staircase": each dog sits on a common baseline (box bottom),
    sized so heights grow small -> x-large. Offsets derived from each image's
    paw line within its 1254px square (small 70.8%, med 84.4%, lg 91.1%, xl 88.5%). */
-.size-card__art { position: relative; height: 150px; overflow: hidden; margin-bottom: 0.85rem; }
+.size-card__art { position: relative; height: 200px; overflow: hidden; margin-bottom: 0.85rem; }
 .size-card__art img {
   position: absolute; left: 50%; transform: translateX(-50%); width: auto; height: auto;
   /* dissolve the illustration's cream background into the card (no hard rectangle) */
-  -webkit-mask-image: radial-gradient(80% 74% at 50% 66%, #000 60%, transparent 85%);
-  mask-image: radial-gradient(80% 74% at 50% 66%, #000 60%, transparent 85%);
+  -webkit-mask-image: radial-gradient(82% 76% at 50% 64%, #000 62%, transparent 86%);
+  mask-image: radial-gradient(82% 76% at 50% 64%, #000 62%, transparent 86%);
 }
-.size-card--s  .size-card__art img { height: 152px; bottom: -44px; }
-.size-card--m  .size-card__art img { height: 126px; bottom: -20px; }
-.size-card--l  .size-card__art img { height: 131px; bottom: -12px; }
-.size-card--xl .size-card__art img { height: 177px; bottom: -20px; }
+/* bigger dogs, kept in proportion so the small -> large staircase is preserved;
+   paws stay on a common baseline (offset = whitespace below paws in each image) */
+.size-card--s  .size-card__art img { height: 218px; bottom: -64px; }
+.size-card--m  .size-card__art img { height: 180px; bottom: -28px; }
+.size-card--l  .size-card__art img { height: 188px; bottom: -17px; }
 .size-card__label {
   font-family: var(--body); font-size: 0.74rem; font-weight: 700;
   letter-spacing: 0.18em; text-transform: uppercase; color: #fff;
