@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adriana Groomer: Gentle Dog Grooming in Manhattan</title>
+  <meta name="description" content="Adriana is a Manhattan dog groomer offering calm, one-on-one grooming at her studio or your home. Full grooming, mini grooming, spa &amp; bath, and a gentle puppy package." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Adriana Groomer: Gentle Dog Grooming in Manhattan" />
+  <meta property="og:description" content="Calm, one-on-one dog grooming at my studio or your home in Manhattan." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/logo-mark-black.png" />
+
+  <link rel="icon" type="image/png" href="assets/logo-mark-black.png" />
+
+  <!-- Body font: Inter (brand). Display font: Franci, self-hosted (see styles.css @font-face) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#top" aria-label="Adriana Groomer home">
+        <img class="nav__logo nav__logo--dark" src="assets/logo-horizontal-black.png" alt="Adriana Groomer" />
+        <img class="nav__logo nav__logo--light" src="assets/logo-horizontal-white.png" alt="Adriana Groomer" aria-hidden="true" />
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#services">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn--small" href="#contact">Book now</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <img class="bubble bubble--1" src="assets/bolha-ring-1.png" alt="" aria-hidden="true" />
+      <img class="bubble bubble--2" src="assets/bolha-solid-2.png" alt="" aria-hidden="true" />
+      <img class="bubble bubble--3" src="assets/bolha-ring-2.png" alt="" aria-hidden="true" />
+
+      <div class="hero__inner">
+        <div class="hero__text">
+          <p class="eyebrow reveal">Studio &amp; house-call grooming · Manhattan</p>
+          <h1 class="hero__title reveal" data-reveal-delay="1">
+            Grooming that feels like a <span class="accent">spa day</span> for the dog you love most.
+          </h1>
+          <p class="hero__lead reveal" data-reveal-delay="2">
+            Hi, I&rsquo;m Adriana. I groom one dog at a time, calmly and without rush,
+            at my cozy studio or right at your home in Manhattan.
+          </p>
+          <div class="hero__cta reveal" data-reveal-delay="3">
+            <a class="btn" href="#services">Start pampering</a>
+            <a class="link-arrow" href="#how">How I work →</a>
+          </div>
+          <p class="hero__note reveal" data-reveal-delay="4">
+            Full grooming from <strong>$180</strong> at my place &middot; from <strong>$250</strong> house call
+          </p>
+        </div>
+
+        <div class="hero__media reveal" data-reveal-delay="2">
+          <figure class="photo photo--hero">
+            <img src="assets/dog-adriana.png" alt="A happy, freshly groomed cream-colored dog sitting on a soft blanket" />
+          </figure>
+          <img class="bubble bubble--4" src="assets/bolha-solid-1.png" alt="" aria-hidden="true" />
+          <img class="bubble bubble--5" src="assets/bolha-ring-1.png" alt="" aria-hidden="true" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about" id="about">
+      <div class="about__grid">
+        <div class="about__media">
+          <!-- TODO: swap this .photo block for a real photo of Adriana / a groomed dog -->
+          <figure class="photo photo--tall">
+            <span class="photo__paw" aria-hidden="true">🐾</span>
+            <figcaption class="photo__hint">A photo of you &amp; a pup goes here</figcaption>
+          </figure>
+          <img class="bubble bubble--6" src="assets/bolha-ring-2.png" alt="" aria-hidden="true" />
+        </div>
+        <div class="about__text">
+          <p class="eyebrow">About me</p>
+          <h2>Every dog leaves clean, comfortable, and looking like their best self.</h2>
+          <p>
+            I&rsquo;m a Manhattan-based dog groomer, and I treat every pup that comes to me
+            like my own. I keep things calm and unhurried: one dog at a time, no cages,
+            no noise, no rush.
+          </p>
+          <p>
+            Whether you visit my studio or I come to you, your best friend gets my full
+            attention from start to finish. That&rsquo;s how grooming should feel: gentle,
+            personal, and a little bit pampering.
+          </p>
+          <a class="link-arrow" href="#services">See my services →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HOW I WORK ===================== -->
+    <section class="howiwork" id="how">
+      <div class="section-head">
+        <p class="eyebrow">How I work</p>
+        <h2>Two ways to get your dog groomed</h2>
+      </div>
+      <div class="howiwork__grid">
+        <article class="place">
+          <h3>At my place</h3>
+          <p>
+            A cozy, quiet studio in Manhattan where it&rsquo;s just me and your dog:
+            no crowds, no waiting-room chaos. Perfect for pups who relax best in a
+            calm, one-on-one space.
+          </p>
+          <p class="place__price">Full grooming from <strong>$180</strong></p>
+        </article>
+        <article class="place place--accent">
+          <img class="bubble bubble--7" src="assets/bolha-solid-2.png" alt="" aria-hidden="true" />
+          <h3>House call</h3>
+          <p>
+            I come to you, fully equipped, and groom your dog in the comfort of your
+            own home. No carriers, no car rides. Ideal for anxious dogs and busy
+            schedules.
+          </p>
+          <p class="place__price">Full grooming from <strong>$250</strong></p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== INSTAGRAM ===================== -->
+    <section class="instagram" id="gallery">
+      <div class="section-head">
+        <p class="eyebrow">On Instagram</p>
+        <h2>Follow along</h2>
+        <p class="section-head__sub">
+          The freshest from-the-tub pups, straight from my feed. Come say hi
+          on Instagram, <a href="https://instagram.com/adrianadepinhoalves" target="_blank" rel="noopener">@adrianadepinhoalves</a>.
+        </p>
+      </div>
+
+      <!-- ============================================================
+           Official Instagram embeds (pulled live from Instagram, not rehosted).
+           To add another post: copy one <blockquote> below and change the URL
+           in BOTH data-instgrm-permalink and the inner <a href>.
+           ============================================================ -->
+      <div class="insta__embeds">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DXFiXABAhM3/" data-instgrm-version="14">
+          <a href="https://www.instagram.com/p/DXFiXABAhM3/">View this post on Instagram</a>
+        </blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DXLJ7SKjJvX/" data-instgrm-version="14">
+          <a href="https://www.instagram.com/p/DXLJ7SKjJvX/">View this post on Instagram</a>
+        </blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DWZNOKwgmws/" data-instgrm-version="14">
+          <a href="https://www.instagram.com/p/DWZNOKwgmws/">View this post on Instagram</a>
+        </blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DWR55G2gina/" data-instgrm-version="14">
+          <a href="https://www.instagram.com/p/DWR55G2gina/">View this post on Instagram</a>
+        </blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DVFS2fvDOWo/" data-instgrm-version="14">
+          <a href="https://www.instagram.com/p/DVFS2fvDOWo/">View this post on Instagram</a>
+        </blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DIhlcOOSS-e/" data-instgrm-version="14">
+          <a href="https://www.instagram.com/p/DIhlcOOSS-e/">View this post on Instagram</a>
+        </blockquote>
+      </div>
+
+      <a class="btn insta__cta" href="https://instagram.com/adrianadepinhoalves" target="_blank" rel="noopener">Follow me</a>
+    </section>
+
+    <!-- ===================== DOG GROOMING SIZE ===================== -->
+    <section class="size" id="size">
+      <img class="bubble bubble--13" src="assets/bolha-solid-2.png" alt="" aria-hidden="true" />
+      <div class="section-head">
+        <p class="eyebrow">Sizing</p>
+        <h2>What size is your pup?</h2>
+        <p class="section-head__sub">
+          Every dog is a little different, and so is every price. Find your pup&rsquo;s
+          size below, and I&rsquo;ll confirm the exact quote when we chat.
+        </p>
+      </div>
+
+      <div class="size__grid">
+        <article class="size-card size-card--s">
+          <div class="size-card__art">
+            <img src="assets/small-dog.png" alt="Illustration of a small dog" />
+          </div>
+          <p class="size-card__label">Small</p>
+          <p class="size-card__weight"><span class="num">1</span> to <span class="num">13</span> lbs</p>
+          <p class="size-card__height">Up to 12 in tall</p>
+          <p class="size-card__note">Toy and lap-size pups.</p>
+        </article>
+
+        <article class="size-card size-card--m">
+          <div class="size-card__art">
+            <img src="assets/medium-dog.png" alt="Illustration of a medium-size dog" />
+          </div>
+          <p class="size-card__label">Medium</p>
+          <p class="size-card__weight"><span class="num">14</span> to <span class="num">28</span> lbs</p>
+          <p class="size-card__height">Up to 17 in tall</p>
+          <p class="size-card__note">Compact companions.</p>
+        </article>
+
+        <article class="size-card size-card--l">
+          <div class="size-card__art">
+            <img src="assets/large-dog.png" alt="Illustration of a large dog" />
+          </div>
+          <p class="size-card__label">Large</p>
+          <p class="size-card__weight"><span class="num">29</span> to <span class="num">42</span> lbs</p>
+          <p class="size-card__height">Up to 21 in tall</p>
+          <p class="size-card__note">Big, huggable dogs.</p>
+        </article>
+
+        <article class="size-card size-card--xl">
+          <div class="size-card__art">
+            <img src="assets/x-large-dog.png" alt="Illustration of an extra-large dog" />
+          </div>
+          <p class="size-card__label">X-Large</p>
+          <p class="size-card__weight"><span class="num">43</span><span class="num">+</span> lbs</p>
+          <p class="size-card__height">26 in tall or more</p>
+          <p class="size-card__note">Gentle giants.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES & PRICING ===================== -->
+    <section class="services" id="services">
+      <div class="section-head">
+        <p class="eyebrow">Services &amp; pricing</p>
+        <h2>Pick the level of pampering</h2>
+        <p class="section-head__sub">
+          Final price depends on your dog&rsquo;s breed, size, coat, and temperament.
+          The figures below are starting points, so message me for an exact quote.
+        </p>
+      </div>
+
+      <div class="services__grid">
+
+        <!-- Spa & Bath -->
+        <article class="service-card">
+          <div class="service-card__head">
+            <h3>Spa &amp; Bath</h3>
+            <p class="service-card__tag">The fresh-and-clean refresh</p>
+          </div>
+          <ul class="service-card__list">
+            <li>Shampoo &amp; conditioning bath</li>
+            <li>Full blow-dry &amp; brush out</li>
+            <li>Nail trim</li>
+            <li>Ear cleaning</li>
+          </ul>
+          <p class="service-card__price">from <strong>$[XX]</strong><!-- TODO: confirm Spa & Bath price with Adriana --></p>
+        </article>
+
+        <!-- Full Grooming (featured) -->
+        <article class="service-card service-card--featured">
+          <img class="bubble bubble--8" src="assets/bolha-solid-1.png" alt="" aria-hidden="true" />
+          <span class="service-card__badge">Most popular</span>
+          <div class="service-card__head">
+            <h3>Full Grooming</h3>
+            <p class="service-card__tag">The complete head-to-paw treatment</p>
+          </div>
+          <ul class="service-card__list">
+            <li>Shampoo &amp; conditioning bath</li>
+            <li>Full blow-dry &amp; brush out</li>
+            <li>Complete haircut &amp; styling</li>
+            <li>Nail trim</li>
+            <li>Ear cleaning</li>
+            <li>Paw pad shave</li>
+            <li>Sanitary trim</li>
+          </ul>
+          <p class="service-card__price">
+            from <strong>$180</strong> my place
+            <span class="service-card__price-alt">from $250 house call</span>
+          </p>
+        </article>
+
+        <!-- Mini Grooming -->
+        <article class="service-card">
+          <div class="service-card__head">
+            <h3>Mini Grooming</h3>
+            <p class="service-card__tag">A tidy-up between full grooms</p>
+          </div>
+          <ul class="service-card__list">
+            <li>Shampoo bath</li>
+            <li>Blow-dry &amp; brush out</li>
+            <li>Nail trim</li>
+            <li>Paw pad shave</li>
+            <li>Sanitary trim</li>
+            <li>Face &amp; eye trim</li>
+          </ul>
+          <p class="service-card__price">from <strong>$[XX]</strong><!-- TODO: confirm Mini Grooming price with Adriana --></p>
+        </article>
+
+      </div>
+
+      <!-- Add-ons -->
+      <div class="addons">
+        <p class="addons__title">Extra services <span>add to any groom</span></p>
+        <ul class="addons__list">
+          <li><span>Anal gland expression</span><span class="addons__price">$[XX]<!-- TODO --></span></li>
+          <li><span>Teeth cleaning</span><span class="addons__price">$[XX]<!-- TODO --></span></li>
+        </ul>
+      </div>
+
+      <p class="services__foot">Not sure which service fits? <a href="#contact">Just ask me</a>, happy to help.</p>
+    </section>
+
+    <!-- ===================== PUPPY PACKAGE (a pricing package, sits with pricing) ===================== -->
+    <section class="puppy" id="puppy">
+      <img class="bubble bubble--9" src="assets/bolha-ring-1.png" alt="" aria-hidden="true" />
+      <img class="bubble bubble--10" src="assets/bolha-solid-2.png" alt="" aria-hidden="true" />
+      <div class="puppy__inner">
+        <p class="eyebrow eyebrow--light">Puppy package</p>
+        <h2>Your puppy&rsquo;s first spa day</h2>
+        <p class="puppy__lead">
+          First impressions matter. I introduce your puppy to grooming gently, so it
+          becomes something they look forward to, not something they fear.
+        </p>
+        <p class="puppy__detail">
+          The first appointment is all about comfort: a warm bath, a gentle blow-dry,
+          a paw tidy, a sanitary trim, and a soft face trim. No full haircut, no
+          pressure, just a calm, happy start.
+        </p>
+        <p class="puppy__price">Puppy&rsquo;s first spa from <strong>$[XX]</strong><!-- TODO: confirm puppy package price --></p>
+        <a class="btn btn--light" href="#contact">Book now</a>
+      </div>
+    </section>
+
+    <!-- ===================== BENEFITS ===================== -->
+    <section class="benefits" id="benefits">
+      <div class="section-head">
+        <p class="eyebrow">Why it matters</p>
+        <h2>Grooming is more than looks</h2>
+      </div>
+      <div class="benefits__grid">
+        <div class="benefit">
+          <h3>Healthy skin &amp; coat</h3>
+          <p>Regular bathing and brushing prevent matting, tangles, and the skin issues they cause.</p>
+        </div>
+        <div class="benefit">
+          <h3>Comfortable paws</h3>
+          <p>Trimmed nails and tidy paw pads protect your dog&rsquo;s posture, balance, and joints.</p>
+        </div>
+        <div class="benefit">
+          <h3>Clean ears</h3>
+          <p>Clearing buildup helps prevent the infections that sneak up on so many dogs.</p>
+        </div>
+        <div class="benefit">
+          <h3>Fresher breath</h3>
+          <p>Teeth cleaning catches dental trouble early and keeps that puppy breath in check.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== WHAT I ASK ===================== -->
+    <section class="ask" id="ask">
+      <div class="ask__inner">
+        <div class="section-head section-head--left">
+          <p class="eyebrow">Before we meet</p>
+          <h2>A few things I ask</h2>
+        </div>
+        <ol class="ask__list">
+          <li>
+            <span class="ask__num">1</span>
+            <div>
+              <h3>Book ahead</h3>
+              <p>I take one dog at a time, so appointments fill up. Reach out early to find a slot that works for you.</p>
+            </div>
+          </li>
+          <li>
+            <span class="ask__num">2</span>
+            <div>
+              <h3>Keep vaccines current</h3>
+              <p>Please have your dog&rsquo;s vaccinations up to date for everyone&rsquo;s safety. Let me know if you have any questions.</p>
+            </div>
+          </li>
+          <li>
+            <span class="ask__num">3</span>
+            <div>
+              <h3>Tell me about your dog</h3>
+              <p>Share any health, skin, or behavior needs beforehand so I can make the visit as calm and safe as possible.</p>
+            </div>
+          </li>
+          <li>
+            <span class="ask__num">4</span>
+            <div>
+              <h3>Give notice to cancel</h3>
+              <p>Life happens, so just let me know as early as you can. Same-day cancellations may be subject to a fee.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="contact" id="contact">
+      <div class="contact__panel">
+        <span class="contact__deco contact__deco--1" aria-hidden="true"></span>
+        <span class="contact__deco contact__deco--2" aria-hidden="true"></span>
+        <div class="contact__inner">
+          <p class="eyebrow contact__eyebrow">Get in touch</p>
+          <h2>Let&rsquo;s book your dog&rsquo;s spa day</h2>
+          <p class="contact__lead">
+            Serving all of Manhattan, at my studio or your home. Call, text, or
+            message me and I&rsquo;ll get right back to you, usually the same day.
+          </p>
+          <div class="contact__actions">
+            <a class="btn btn--light" href="tel:+16315659953">Book now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <img class="footer__wordmark" src="assets/logo-horizontal-white.png" alt="Adriana Groomer" />
+        <p class="footer__tag">Gentle dog grooming in Manhattan</p>
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <p class="footer__label">Contact</p>
+          <a href="tel:+16315659953">(631) 565-9953</a>
+          <a href="https://wa.me/16315659953" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+        <div class="footer__col">
+          <p class="footer__label">Service area</p>
+          <span>Manhattan, NYC</span>
+          <span>Studio &amp; house calls</span>
+        </div>
+        <div class="footer__col">
+          <p class="footer__label">Explore</p>
+          <a href="#services">Services</a>
+          <a href="#services">Pricing</a>
+          <a href="#contact">Book now</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__base">
+      <span>© <span id="year"></span> Adriana Groomer</span>
+      <span>Made with care for happy dogs 🐾</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <!-- Instagram official embeds renderer -->
+  <script async src="//www.instagram.com/embed.js"></script>
+</body>
+</html>

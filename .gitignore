@@ -1,0 +1,9 @@
+# OS
+.DS_Store
+
+# Local tooling
+.claude/
+.vercel/
+
+# Not part of the landing page (brand manifesto kept out of the deploy)
+adriana-movimento-built-with-hands.html
