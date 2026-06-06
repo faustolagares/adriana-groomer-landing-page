@@ -11,3 +11,7 @@ adriana-movimento-built-with-hands.html
 
 # OG image generator (not part of the site)
 og.html
+
+# Never publish documents accidentally dropped in the project
+*.docx
+*.pdf

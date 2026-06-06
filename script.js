@@ -32,7 +32,7 @@
 
   // Single-element reveals (one block fades up as it enters).
   document
-    .querySelectorAll(".section-head, .about__text, .about__media, .puppy__inner, .contact__panel, .addons, .services__foot, .insta__embeds, .insta__cta, .pricing__table")
+    .querySelectorAll(".section-head, .about__head, .about__strip, .puppy__inner, .contact__panel, .addons, .services__foot, .insta__embeds, .insta__cta, .pricing__table")
     .forEach(function (el) { el.classList.add("reveal"); });
 
   // Grouped reveals: children of a grid cascade in one after another.

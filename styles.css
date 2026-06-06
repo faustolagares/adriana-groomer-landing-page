@@ -254,41 +254,36 @@ section { padding: clamp(3.75rem, 9vw, 8rem) var(--pad); position: relative; }
 /* =========================================================
    ABOUT
    ========================================================= */
-.about { background: var(--paper); }
-.about__grid {
-  max-width: var(--maxw); margin: 0 auto;
-  display: grid; grid-template-columns: 0.85fr 1fr; gap: clamp(2rem, 5vw, 5rem);
-  align-items: center;
-}
-.about__media { position: relative; }
-.about__media .photo { max-width: 460px; }
-.about .bubble--6 { top: -6%; right: -4%; width: 96px; animation-delay: -2.5s; }
+.about { background: var(--paper); position: relative; overflow: hidden; }
+.about .bubble--6 { top: 8%; right: 4%; width: 90px; opacity: .5; animation-delay: -2.5s; }
+.about__head { max-width: 720px; margin: 0 auto clamp(2.25rem, 4vw, 3.25rem); text-align: center; position: relative; z-index: 2; }
+.about__head h2 { margin-bottom: 1.3rem; }
+.about__head p { color: var(--ink-soft); margin: 0 auto 1.1rem; max-width: 58ch; }
+.about__head .link-arrow { margin-top: 0.6rem; }
 
-/* Polaroid fan — printed-photo look, lined up; straighten + lift on hover (no shadow) */
-.polaroids {
-  position: relative; z-index: 1;
-  display: flex; justify-content: center; align-items: center;
-  max-width: 440px; margin: 0 auto; padding: 1.5rem 0 2rem;
+/* Polaroid strip — all photos lined up like printed snapshots; scroll/drag; hover lifts (no shadow) */
+.about__strip {
+  display: flex; gap: clamp(0.85rem, 2vw, 1.4rem);
+  max-width: var(--maxw); margin: 0 auto;
+  padding: 1.25rem 0.5rem 1.75rem;
+  overflow-x: auto; scroll-snap-type: x proximity;
+  -ms-overflow-style: none; scrollbar-width: none;
 }
+.about__strip::-webkit-scrollbar { display: none; }
 .polaroid {
-  flex: 0 0 42%; width: 42%;
+  flex: 0 0 clamp(150px, 23vw, 182px); scroll-snap-align: center;
   background: #fff; border: 1px solid var(--line); border-radius: 3px;
-  padding: 0.55rem 0.55rem 2.3rem;
-  position: relative;
-  transition: transform .4s var(--ease);
+  padding: 0.5rem 0.5rem 2rem; position: relative;
+  transition: transform .35s var(--ease);
 }
+.polaroid:nth-child(odd)  { transform: rotate(-2.5deg); }
+.polaroid:nth-child(even) { transform: rotate(2.5deg); }
 .polaroid img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; display: block; border-radius: 1px; }
 .polaroid figcaption {
-  position: absolute; left: 0.4rem; right: 0.4rem; bottom: 0.55rem; text-align: center;
-  font-family: "Caveat", cursive; font-weight: 600; font-size: 1.3rem; line-height: 1; color: var(--ink-soft);
+  position: absolute; left: 0.4rem; right: 0.4rem; bottom: 0.5rem; text-align: center;
+  font-family: "Caveat", cursive; font-weight: 600; font-size: 1.25rem; line-height: 1; color: var(--ink-soft);
 }
-.polaroid--1 { transform: rotate(-8deg); z-index: 1; }
-.polaroid--2 { transform: rotate(2deg) translateY(-8px); z-index: 3; margin: 0 -13%; }
-.polaroid--3 { transform: rotate(8deg); z-index: 2; }
-.polaroid:hover { transform: rotate(0deg) translateY(-12px) scale(1.05); z-index: 5; }
-.about__text h2 { margin-bottom: 1.4rem; }
-.about__text p { color: var(--ink-soft); margin-bottom: 1.1rem; max-width: 46ch; }
-.about__text .link-arrow { margin-top: 0.6rem; }
+.polaroid:hover { transform: rotate(0deg) translateY(-10px) scale(1.05); z-index: 3; }
 
 /* =========================================================
    HOW I WORK
@@ -639,8 +634,6 @@ section { padding: clamp(3.75rem, 9vw, 8rem) var(--pad); position: relative; }
   .hero__media { order: 0; }
   .hero__media .photo { max-width: 380px; margin: 0 auto; }
   .hero .bubble--3 { display: none; }
-  .about__grid { grid-template-columns: 1fr; }
-  .about__media { order: 2; max-width: 460px; }
   .ask__inner { grid-template-columns: 1fr; }
   .benefits__grid { grid-template-columns: repeat(2, 1fr); }
   .size__grid { grid-template-columns: repeat(2, 1fr); }
