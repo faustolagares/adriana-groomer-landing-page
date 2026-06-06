@@ -259,6 +259,7 @@ section { padding: clamp(3.75rem, 9vw, 8rem) var(--pad); position: relative; }
 .about__head { max-width: 720px; margin: 0 auto clamp(2.25rem, 4vw, 3.25rem); text-align: center; position: relative; z-index: 2; }
 .about__head h2 { margin-bottom: 1.3rem; }
 .about__head p { color: var(--ink-soft); margin: 0 auto 1.1rem; max-width: 58ch; }
+.about__head .eyebrow { color: var(--pink-deep); }
 .about__head .link-arrow { margin-top: 0.6rem; }
 
 /* Polaroid strip — all photos lined up like printed snapshots; scroll/drag; hover lifts (no shadow) */
