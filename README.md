@@ -16,28 +16,20 @@ python3 -m http.server 5050
 # open http://localhost:5050
 ```
 
-## ⚠️ Before going live — fill in the placeholders
-Search the code for these and replace:
+## Status
+- **Prices** — done. Size-based (Small/Medium/Large × my place / house call) for
+  Full Grooming, Mini Grooming, Spa & Bath, and the Puppy package; add-ons
+  (anal $25 / teeth $10 / combo $30); house-call $200 minimum; matting / shave-down
+  ($400 min, signed waiver) note. X-Large removed per Adriana.
+- **Instagram** — done. Six official embeds of @adrianadepinhoalves dog-grooming reels.
+- **Contact** — call / text / WhatsApp only (no form), wired to `(631) 565-9953`.
 
-1. **Prices** — every `$[XX]` in `index.html` (Spa & Bath, Mini Grooming,
-   Puppy's first spa, and the Anal gland / Teeth cleaning add-ons).
-   Full Grooming ($180 my place / $250 house call) is already set.
-2. **Instagram handle** — replace every `adrianagroomer` in the Instagram
-   section (and footer, if added) with the real handle.
-3. **Live Instagram feed** (optional) — the Instagram section currently shows
-   placeholder tiles. To show the real feed, swap the `<div class="insta__grid">…</div>`
-   for a free widget embed. No server needed — easiest options:
-   - **LightWidget** (https://lightwidget.com) → gives an `<iframe>` you paste in.
-   - **Behold.so** (https://behold.so) → gives a `<script>` + web component.
-   Both have free tiers; see the comment block in the Instagram section of `index.html`.
-4. **Photos** — real photo slots ready to fill:
-   - Hero (`.photo--hero`) — **done** (`assets/dog-adriana.png`)
-   - About (`.photo--tall`) — Adriana with a pup (still a placeholder)
-   - Size cards — **done** (`assets/{small,medium,large,x-large}-dog.png`)
-   Drop real images into `assets/` and replace the `.photo` block with
+### Still open
+1. **About photo** (`.photo--tall`) — still a placeholder; drop a real photo of
+   Adriana with a pup into `assets/` and replace the `.photo` block with
    `<img src="assets/your-photo.jpg" alt="..." class="photo photo--tall" />`.
-
-Contact is now call / text / WhatsApp only (no form), all wired to `(631) 565-9953`.
+2. **Liability waiver / terms / insurance** — separate (legal) task. When the waiver
+   document exists, link it / add an e-sign step to the "Book now" flow.
 
 ## Brand
 - Colors: ink `#14110f`, paper `#f6f3ee`, soft pink `#f4739e`, gray `#d1d1d1`

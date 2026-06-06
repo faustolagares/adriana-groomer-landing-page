@@ -146,6 +146,7 @@
             schedules.
           </p>
           <p class="place__price">Full grooming from <strong>$250</strong></p>
+          <p class="place__note">House-call minimum $200, any service (covers travel, tolls &amp; parking).</p>
         </article>
       </div>
     </section>
@@ -232,16 +233,6 @@
           <p class="size-card__height">Up to 21 in tall</p>
           <p class="size-card__note">Big, huggable dogs.</p>
         </article>
-
-        <article class="size-card size-card--xl">
-          <div class="size-card__art">
-            <img src="assets/x-large-dog.png" alt="Illustration of an extra-large dog" />
-          </div>
-          <p class="size-card__label">X-Large</p>
-          <p class="size-card__weight"><span class="num">43</span><span class="num">+</span> lbs</p>
-          <p class="size-card__height">26 in tall or more</p>
-          <p class="size-card__note">Gentle giants.</p>
-        </article>
       </div>
     </section>
 
@@ -270,7 +261,8 @@
             <li>Nail trim</li>
             <li>Ear cleaning</li>
           </ul>
-          <p class="service-card__price">from <strong>$[XX]</strong><!-- TODO: confirm Spa & Bath price with Adriana --></p>
+          <p class="service-card__price">from <strong>$120</strong> my place<span class="service-card__price-alt">from $200 house call</span></p>
+          <p class="service-card__fineprint">Final price depends on your dog&rsquo;s size and coat length. I&rsquo;ll confirm the exact price when I see them.</p>
         </article>
 
         <!-- Full Grooming (featured) -->
@@ -290,10 +282,12 @@
             <li>Paw pad shave</li>
             <li>Sanitary trim</li>
           </ul>
-          <p class="service-card__price">
-            from <strong>$180</strong> my place
-            <span class="service-card__price-alt">from $250 house call</span>
-          </p>
+          <div class="price-table">
+            <p class="price-table__legend">My place / house call</p>
+            <div class="price-row"><span class="price-row__size">Small</span><span class="price-row__amt">$180 <span class="sep">/</span> <span class="hc">$250</span></span></div>
+            <div class="price-row"><span class="price-row__size">Medium</span><span class="price-row__amt">$200 <span class="sep">/</span> <span class="hc">$300</span></span></div>
+            <div class="price-row"><span class="price-row__size">Large</span><span class="price-row__amt">$320 <span class="sep">/</span> <span class="hc">$400</span></span></div>
+          </div>
         </article>
 
         <!-- Mini Grooming -->
@@ -310,7 +304,12 @@
             <li>Sanitary trim</li>
             <li>Face &amp; eye trim</li>
           </ul>
-          <p class="service-card__price">from <strong>$[XX]</strong><!-- TODO: confirm Mini Grooming price with Adriana --></p>
+          <div class="price-table">
+            <p class="price-table__legend">My place / house call</p>
+            <div class="price-row"><span class="price-row__size">Small</span><span class="price-row__amt">$140 <span class="sep">/</span> <span class="hc">$200</span></span></div>
+            <div class="price-row"><span class="price-row__size">Medium</span><span class="price-row__amt">$160 <span class="sep">/</span> <span class="hc">$250</span></span></div>
+            <div class="price-row"><span class="price-row__size">Large</span><span class="price-row__amt">$200 <span class="sep">/</span> <span class="hc">$300</span></span></div>
+          </div>
         </article>
 
       </div>
@@ -319,9 +318,22 @@
       <div class="addons">
         <p class="addons__title">Extra services <span>add to any groom</span></p>
         <ul class="addons__list">
-          <li><span>Anal gland expression</span><span class="addons__price">$[XX]<!-- TODO --></span></li>
-          <li><span>Teeth cleaning</span><span class="addons__price">$[XX]<!-- TODO --></span></li>
+          <li><span>Anal gland expression</span><span class="addons__price">$25</span></li>
+          <li><span>Teeth cleaning</span><span class="addons__price">$10</span></li>
+          <li><span>Combo (anal + teeth)</span><span class="addons__price">$30</span></li>
         </ul>
+      </div>
+
+      <!-- Good to know -->
+      <div class="services__note">
+        <div class="note-card">
+          <p class="note-card__title">House calls</p>
+          <p><strong>$200 minimum</strong> for any house-call service. It covers the travel, tolls, and parking, so it&rsquo;s worth the trip to you.</p>
+        </div>
+        <div class="note-card">
+          <p class="note-card__title">Matted coats</p>
+          <p>I don&rsquo;t do dematting. If your dog is badly matted, I&rsquo;ll recommend a vet first. A shave-down (<strong>from $400</strong>) may be possible case by case, with a signed care waiver.</p>
+        </div>
       </div>
 
       <p class="services__foot">Not sure which service fits? <a href="#contact">Just ask me</a>, happy to help.</p>
@@ -343,7 +355,12 @@
           a paw tidy, a sanitary trim, and a soft face trim. No full haircut, no
           pressure, just a calm, happy start.
         </p>
-        <p class="puppy__price">Puppy&rsquo;s first spa from <strong>$[XX]</strong><!-- TODO: confirm puppy package price --></p>
+        <div class="puppy__prices price-table">
+          <p class="price-table__legend">My place / house call</p>
+          <div class="price-row"><span class="price-row__size">Small</span><span class="price-row__amt">$110 <span class="sep">/</span> <span class="hc">$200</span></span></div>
+          <div class="price-row"><span class="price-row__size">Medium</span><span class="price-row__amt">$160 <span class="sep">/</span> <span class="hc">$220</span></span></div>
+          <div class="price-row"><span class="price-row__size">Large</span><span class="price-row__amt">$180 <span class="sep">/</span> <span class="hc">$250</span></span></div>
+        </div>
         <a class="btn btn--light" href="#contact">Book now</a>
       </div>
     </section>

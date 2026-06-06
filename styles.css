@@ -290,6 +290,8 @@ section { padding: clamp(3.75rem, 9vw, 8rem) var(--pad); position: relative; }
 .place--accent:hover { border-color: var(--pink-deep); }
 .place--accent p { color: rgba(246,243,238,.78); }
 .place--accent .place__price { color: var(--paper); }
+.place__note { margin-top: 0.6rem; font-size: 0.86rem; color: var(--ink-soft); }
+.place--accent .place__note { color: rgba(246,243,238,.7); }
 .place--accent h3 { color: var(--paper); }
 .place .bubble--7 { top: -10%; right: -6%; width: 120px; opacity: .5; }
 
@@ -322,6 +324,25 @@ section { padding: clamp(3.75rem, 9vw, 8rem) var(--pad); position: relative; }
 .service-card__price { font-size: 1.02rem; display: flex; flex-direction: column; gap: 0.15rem; }
 .service-card__price strong { font-family: var(--display); font-size: 1.7rem; font-weight: 600; color: var(--ink); }
 .service-card__price-alt { font-size: 0.9rem; color: var(--ink-soft); }
+.service-card__fineprint { margin-top: 0.6rem; font-size: 0.82rem; line-height: 1.45; color: var(--ink-soft); }
+
+/* size-based price table inside a service card (my place / house call) */
+.price-table { margin-top: auto; }
+.price-table__legend { font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700; color: var(--pink-deep); margin-bottom: 0.55rem; }
+.price-row { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; padding: 0.5rem 0; border-top: 1px solid var(--line); }
+.price-row:first-of-type { border-top: 0; }
+.price-row__size { font-weight: 600; color: var(--ink); }
+.price-row__amt { font-family: var(--display); font-weight: 600; font-size: 1.15rem; color: var(--ink); white-space: nowrap; }
+.price-row__amt .sep { color: var(--ink-soft); margin: 0 0.15em; font-weight: 400; }
+.price-row__amt .hc { color: var(--ink-soft); }
+/* featured (dark) card */
+.service-card--featured .price-table__legend { color: var(--pink); }
+.service-card--featured .price-row { border-top-color: rgba(246,243,238,.16); }
+.service-card--featured .price-row__size,
+.service-card--featured .price-row__amt { color: var(--paper); }
+.service-card--featured .price-row__amt .sep,
+.service-card--featured .price-row__amt .hc { color: rgba(246,243,238,.7); }
+.service-card--featured .service-card__fineprint { color: rgba(246,243,238,.7); }
 
 .service-card--featured { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .service-card--featured:hover { border-color: var(--pink-deep); }
@@ -353,6 +374,19 @@ section { padding: clamp(3.75rem, 9vw, 8rem) var(--pad); position: relative; }
 .addons__list { list-style: none; display: flex; flex-wrap: wrap; gap: 1rem 2.5rem; }
 .addons__list li { display: flex; align-items: baseline; gap: 0.7rem; font-size: 1rem; }
 .addons__price { font-family: var(--display); font-weight: 600; font-size: 1.15rem; }
+
+/* "Good to know" note (matting / shave-down policy + house-call minimum) */
+.services__note {
+  max-width: var(--maxw); margin: clamp(1.25rem, 2.5vw, 1.75rem) auto 0;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;
+}
+.note-card {
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: clamp(1.1rem, 2vw, 1.5rem) clamp(1.25rem, 2.2vw, 1.6rem);
+}
+.note-card__title { font-family: var(--body); font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--pink-deep); margin-bottom: 0.5rem; }
+.note-card p { color: var(--ink-soft); font-size: 0.92rem; line-height: 1.5; }
+.note-card strong { color: var(--ink); font-weight: 600; }
 .services__foot { max-width: var(--maxw); margin: clamp(1.5rem, 3vw, 2rem) auto 0; text-align: center; color: var(--ink-soft); }
 .services__foot a { color: var(--pink-deep); border-bottom: 1.5px solid var(--pink-deep); }
 
@@ -372,7 +406,7 @@ section { padding: clamp(3.75rem, 9vw, 8rem) var(--pad); position: relative; }
 .size .bubble--13 { top: 7%; right: 4%; width: 78px; opacity: .4; animation-delay: -2s; }
 .size__grid {
   max-width: var(--maxw); margin: 0 auto;
-  display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(1rem, 2.5vw, 1.75rem);
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2.5vw, 1.75rem);
   align-items: stretch;
 }
 .size-card {
@@ -415,8 +449,13 @@ section { padding: clamp(3.75rem, 9vw, 8rem) var(--pad); position: relative; }
 .puppy h2 { color: var(--paper); margin-bottom: 1.3rem; }
 .puppy__lead { font-size: var(--fs-lead); color: rgba(246,243,238,.9); margin-bottom: 1.2rem; }
 .puppy__detail { color: rgba(246,243,238,.7); margin-bottom: 1.4rem; max-width: 56ch; margin-left: auto; margin-right: auto; }
-.puppy__price { color: var(--paper); font-size: 1.05rem; margin-bottom: 1.8rem; }
-.puppy__price strong { font-family: var(--display); font-weight: 600; font-size: 1.5rem; }
+.puppy__prices { max-width: 360px; margin: 0 auto 1.9rem; }
+.puppy__prices .price-table__legend { color: var(--pink); text-align: left; }
+.puppy__prices .price-row { border-top-color: rgba(246,243,238,.16); }
+.puppy__prices .price-row__size { color: var(--paper); }
+.puppy__prices .price-row__amt { color: var(--paper); }
+.puppy__prices .price-row__amt .sep,
+.puppy__prices .price-row__amt .hc { color: rgba(246,243,238,.7); }
 .puppy .bubble--9 { top: 12%; left: 6%; width: 90px; opacity: .55; animation-delay: -2s; }
 .puppy .bubble--10 { bottom: 10%; right: 7%; width: 70px; opacity: .5; animation-delay: -4s; }
 
@@ -618,6 +657,7 @@ section { padding: clamp(3.75rem, 9vw, 8rem) var(--pad); position: relative; }
   .hero .bubble--1 { left: auto; right: -26px; top: 3%; width: 76px; }
 
   .services__grid { grid-template-columns: 1fr; gap: 1.25rem; }
+  .services__note { grid-template-columns: 1fr; }
   .insta__embeds { gap: 1.25rem; }
   .howiwork__grid { grid-template-columns: 1fr; gap: 1.25rem; }
   .service-card--featured { order: -1; }
