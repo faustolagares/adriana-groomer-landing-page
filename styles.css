@@ -609,8 +609,10 @@ section { padding: clamp(3.75rem, 9vw, 8rem) var(--pad); position: relative; }
   .hero__cta .btn { width: 100%; }
   .hero__cta .link-arrow { align-self: center; }
 
-  /* keep decorative bubbles clear of the hero CTAs on small screens */
+  /* keep decorative bubbles clear of the hero text on small screens */
   .hero .bubble--2, .hero .bubble--5 { display: none; }
+  /* move the top bubble to the right edge so it doesn't sit under the eyebrow/headline */
+  .hero .bubble--1 { left: auto; right: -26px; top: 3%; width: 76px; }
 
   .services__grid { grid-template-columns: 1fr; gap: 1.25rem; }
   .insta__embeds { gap: 1.25rem; }
