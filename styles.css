@@ -523,10 +523,11 @@ section { padding: clamp(3.75rem, 9vw, 8rem) var(--pad); position: relative; }
 .ask__list { list-style: none; display: grid; gap: 1.75rem; }
 .ask__list li { display: flex; gap: 1.25rem; align-items: flex-start; }
 .ask__num {
-  flex-shrink: 0; width: 46px; height: 46px; border-radius: 50%;
-  display: grid; place-items: center;
-  background: var(--pink-wash); border: 1px solid var(--line);
-  font-family: var(--display); font-weight: 600; font-size: 1.2rem; color: var(--pink-deep);
+  flex-shrink: 0; width: 60px; height: 58px;
+  display: flex; align-items: center; justify-content: center;
+  padding-top: 0.5rem;                 /* nudge the number onto the paw pad */
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 96'%3E%3Cg fill='%23f7d4e2'%3E%3Cellipse cx='50' cy='64' rx='31' ry='25'/%3E%3Cellipse cx='20' cy='45' rx='10.5' ry='13.5'/%3E%3Cellipse cx='39' cy='27' rx='11' ry='14'/%3E%3Cellipse cx='61' cy='27' rx='11' ry='14'/%3E%3Cellipse cx='80' cy='45' rx='10.5' ry='13.5'/%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+  font-family: var(--display); font-weight: 600; font-size: 1.1rem; color: var(--pink-deep);
 }
 .ask__list h3 { font-size: 1.18rem; margin-bottom: 0.3rem; }
 .ask__list p { color: var(--ink-soft); font-size: 0.97rem; }
