@@ -7,3 +7,7 @@
 
 # Not part of the landing page (brand manifesto kept out of the deploy)
 adriana-movimento-built-with-hands.html
+.vercel
+
+# OG image generator (not part of the site)
+og.html
