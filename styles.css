@@ -301,6 +301,8 @@ section { padding: clamp(3.75rem, 9vw, 8rem) var(--pad); position: relative; }
   transition: transform .35s var(--ease), border-color .3s;
 }
 .place:hover { transform: translateY(-4px); border-color: var(--gray); }
+.place__icon { height: 56px; width: auto; display: block; margin-bottom: 1.1rem; color: var(--ink); }
+.place--accent .place__icon { color: var(--paper); }
 .place h3 { margin-bottom: 0.9rem; }
 .place p { color: var(--ink-soft); }
 .place__price { margin-top: 1.4rem; font-size: 1.05rem; color: var(--ink); }
