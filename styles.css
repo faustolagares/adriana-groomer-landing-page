@@ -263,7 +263,7 @@ section { padding: clamp(3.75rem, 9vw, 8rem) var(--pad); position: relative; }
 
 /* Polaroid strip — all photos lined up like printed snapshots; scroll/drag; hover lifts (no shadow) */
 .about__strip {
-  display: flex; gap: clamp(0.85rem, 2vw, 1.4rem);
+  display: flex; gap: clamp(0.5rem, 1.2vw, 0.85rem);
   max-width: var(--maxw); margin: 0 auto;
   padding: 1.25rem 0.5rem 1.75rem;
   overflow-x: auto; scroll-snap-type: x proximity;
@@ -271,7 +271,7 @@ section { padding: clamp(3.75rem, 9vw, 8rem) var(--pad); position: relative; }
 }
 .about__strip::-webkit-scrollbar { display: none; }
 .polaroid {
-  flex: 0 0 clamp(150px, 23vw, 182px); scroll-snap-align: center;
+  flex: 0 0 clamp(168px, 25vw, 205px); scroll-snap-align: center;
   background: #fff; border: 1px solid var(--line); border-radius: 3px;
   padding: 0.5rem 0.5rem 2rem; position: relative;
   transition: transform .35s var(--ease);
@@ -688,4 +688,7 @@ section { padding: clamp(3.75rem, 9vw, 8rem) var(--pad); position: relative; }
   .benefits__grid { grid-template-columns: 1fr; }
   .contact__actions { width: 100%; }
   .contact__actions .btn { flex: 1; }
+  /* show more photos at once on phones: wrap the strip into a 2-column grid */
+  .about__strip { flex-wrap: wrap; justify-content: center; overflow-x: visible; gap: 0.6rem; }
+  .about__strip .polaroid { flex: 0 0 46%; }
 }
