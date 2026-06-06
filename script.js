@@ -28,23 +28,32 @@
     });
   }
 
-  /* ---- Nav border on scroll ---- */
-  if (nav) {
-    var onScroll = function () {
-      nav.classList.toggle("is-scrolled", window.scrollY > 12);
-    };
-    onScroll();
-    window.addEventListener("scroll", onScroll, { passive: true });
-  }
+  /* ---- Scroll reveal (staggered, works on desktop + mobile) ---- */
 
-  /* ---- Scroll reveal ---- */
-  var reveals = document.querySelectorAll(".reveal");
-  // Tag a few section blocks for reveal automatically
+  // Single-element reveals (one block fades up as it enters).
   document
-    .querySelectorAll(".section-head, .service-card, .place, .benefit, .size-card, .ask__list li, .about__text, .about__media, .gallery__grid .photo, .pricing__table, .puppy__inner, .contact__intro, .contact__form, .addons")
+    .querySelectorAll(".section-head, .about__text, .about__media, .puppy__inner, .contact__panel, .addons, .services__foot, .insta__embeds, .insta__cta, .pricing__table")
     .forEach(function (el) { el.classList.add("reveal"); });
 
-  reveals = document.querySelectorAll(".reveal");
+  // Grouped reveals: children of a grid cascade in one after another.
+  var groups = [
+    ".howiwork__grid",
+    ".services__grid",
+    ".size__grid",
+    ".benefits__grid",
+    ".ask__list"
+  ];
+  groups.forEach(function (sel) {
+    var container = document.querySelector(sel);
+    if (!container) return;
+    Array.prototype.forEach.call(container.children, function (child, i) {
+      child.classList.add("reveal");
+      // staggered cascade, capped so later items don't lag too much
+      child.style.transitionDelay = Math.min(i * 90, 450) + "ms";
+    });
+  });
+
+  var reveals = document.querySelectorAll(".reveal");
 
   if ("IntersectionObserver" in window) {
     var io = new IntersectionObserver(
@@ -56,7 +65,7 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -8% 0px" }
+      { threshold: 0.1, rootMargin: "0px 0px -10% 0px" }
     );
     reveals.forEach(function (el) { io.observe(el); });
   } else {
