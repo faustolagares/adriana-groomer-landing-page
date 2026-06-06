@@ -27,7 +27,7 @@
   <!-- Body font: Inter (brand). Display font: Franci, self-hosted (see styles.css @font-face) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -96,11 +96,20 @@
     <section class="about" id="about">
       <div class="about__grid">
         <div class="about__media">
-          <!-- TODO: swap this .photo block for a real photo of Adriana / a groomed dog -->
-          <figure class="photo photo--tall">
-            <span class="photo__paw" aria-hidden="true">🐾</span>
-            <figcaption class="photo__hint">A photo of you &amp; a pup goes here</figcaption>
-          </figure>
+          <div class="polaroids">
+            <figure class="polaroid polaroid--1">
+              <img src="assets/adriana/adriana-bernese.webp" alt="Adriana with a Bernese mountain dog" loading="lazy" />
+              <figcaption>gentle giants</figcaption>
+            </figure>
+            <figure class="polaroid polaroid--2">
+              <img src="assets/adriana/adriana-nyc.webp" alt="Adriana and a dog by the Manhattan skyline" loading="lazy" />
+              <figcaption>manhattan walks</figcaption>
+            </figure>
+            <figure class="polaroid polaroid--3">
+              <img src="assets/adriana/adriana-beagle.webp" alt="Adriana hugging a beagle puppy" loading="lazy" />
+              <figcaption>puppy cuddles</figcaption>
+            </figure>
+          </div>
           <img class="bubble bubble--6" src="assets/bolha-ring-2.png" alt="" aria-hidden="true" />
         </div>
         <div class="about__text">
