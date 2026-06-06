@@ -264,7 +264,7 @@ section { padding: clamp(3.75rem, 9vw, 8rem) var(--pad); position: relative; }
 
 /* Polaroid strip — all photos lined up like printed snapshots; scroll/drag; hover lifts (no shadow) */
 .about__strip {
-  display: flex; gap: clamp(0.5rem, 1.2vw, 0.85rem);
+  display: flex; gap: clamp(0.5rem, 1.2vw, 0.85rem); justify-content: safe center;
   max-width: var(--maxw); margin: 0 auto;
   padding: 1.25rem 0.5rem 1.75rem;
   overflow-x: auto; scroll-snap-type: x proximity;
