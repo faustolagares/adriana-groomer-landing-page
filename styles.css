@@ -543,9 +543,9 @@ section { padding: clamp(3.75rem, 9vw, 8rem) var(--pad); position: relative; }
   padding: clamp(2.75rem, 6vw, 5.5rem) clamp(1.5rem, 5vw, 4rem);
   text-align: center;
 }
-.contact__inner { position: relative; z-index: 2; max-width: 640px; margin: 0 auto; }
+.contact__inner { position: relative; z-index: 2; max-width: 780px; margin: 0 auto; }
 .contact__eyebrow { color: rgba(255,255,255,.9); }
-.contact h2 { color: #fff; margin-bottom: 1.1rem; }
+.contact h2 { color: #fff; margin-bottom: 1.2rem; font-size: clamp(2.05rem, 1rem + 4.4vw, 4.9rem); line-height: 1.05; }
 .contact__lead { color: rgba(255,255,255,.92); margin: 0 auto 2rem; max-width: 46ch; }
 .contact__actions { display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; }
 .contact__phone { margin-top: 1.6rem; font-family: var(--display); font-weight: 600; font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.1rem); color: #fff; }
